@@ -1,14 +1,15 @@
+import { Link } from "react-router-dom"
 import { ProductProps } from "../utlis/types"
 
 
 const Cardlayout = ({content}:{content:ProductProps[]}) => {
   return (
-    <div className='grid max-md:grid-cols-2 grid-cols-3 gap-4 my-8'>
+    <div className='grid max-md:grid-cols-2 grid-cols-3 gap-6 md:gap-10 my-8'>
             {
              content &&  Array.isArray(content) &&
              content.map(({img,name,price})=>(
-             
-                <div  className='flex flex-col gap-3 bg-[#fff]' key={name} >
+             <Link to={`/marketplace/${name}`} key={name}>
+                <div  className='flex flex-col gap-3 bg-[#fff]  shadow-md shadow-gray ring-2 ring-[#f7f7f7] rounded-lg p-4'  >
                       <div className='rounded-lg overflow-hidden'>
                       <img src={img} alt=""  />
                       </div>
@@ -19,7 +20,7 @@ const Cardlayout = ({content}:{content:ProductProps[]}) => {
                         </div>   
                       </div>
                 </div>
-              
+              </Link>
              )) 
         
             }

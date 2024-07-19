@@ -8,153 +8,155 @@ import Newsletter from "../newsletter/newsletter";
 const Homepage = () => {
 
   return (
-    <div>
-        <section className=''>
-            <div className='flex flex-col items-center gap-6 text-center mt-20  mb-6'>
-                <h3 className='text-6xl font-medium font-clash w-[1000px] leading-normal'>Photography is poetry & beautiful untold stories</h3>
-                <p className=' font-medium font-logo text-2xl leading-normal w-[800px] '>Flip through more than 10,000 vintage shots, old photograghs, historic images and captures seamlessly in one place. Register to get top access.</p>
-            </div>
-            <div>
-                <ul className=' flex gap-6  items-center '>
-                    <li>
-                        <img src={homeimg1} alt='' width={320}/>
-                    </li> 
-                    <li>
-                        <img src={homeimg2} alt='' width={320}/>
-                    </li> 
-                    <li>
-                        <img src={homeimg3} alt='' width={320}/>
-                    </li>
-                    <li>
-                        <img src={homeimg4} alt='' width={320}/>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <section className="my-16 mx-20">
-            <h4 className="text-dark font-medium font-satoshi text-3xl">Featured products</h4>
-            <div className="mt-4">
-                {
-                  Array.isArray(homepro) &&
-                  homepro.map(({img,title,discription,text,id})=>
-                   <div key={id} className="flex flex-col gap-8 my-10">
-                       <div className="bg-[#333333] w-full h-px"/>
-                        <div className={`flex  items-end gap-8 ${id === '2' ? 'flex-row-reverse' :''}`}>
-                            <div className="relative w-full">
-                              <img src={img} alt={title} />
-                               <a href="/">
-                                    <div className="flex justify-center w-full items-center absolute top-0 gap-6 opacity-0 bg-global  h-full  bg-opacity-0 hover:opacity-70 hover:bg-opacity-100">
-                                        <p className="font-satoshi font-normal text-2xl text-[#fff] z-[999]">View Product</p>
-                                        <BsArrowRightCircle  fontSize={31} color="white" className="z-[999] "/>
-                                    </div>
-                               </a>
-                              
-                            </div>
-                            <div className="flex flex-col gap-10">
-                                <h6 className="font-medium font-clash text-4xl">{title}</h6>
-                                <p className="text-gray font-normal text-xl font-satoshi">{discription}</p>
-                                <div className="flex justify-between items-center">
-                                    <div className="flex items-center gap-4">
-                                        <ul className="flex items-center">
-                                            <li>
-                                                <img src={creator1} alt="creator-img"/>
-                                            </li>
-                                            <li>
-                                                <img src={creator2} alt="creator-img"/>
-                                            </li>
-                                            <li>
-                                                <img src={creator3} alt="creator-img"/>
-                                            </li>
-                                            <li>
-                                                <img src={creator4} alt="creator-img"/>
-                                            </li>
-                                        </ul>
-                                        <p className="font-satoshi font-normal text-gray text-lg ">{text}</p>
-                                    </div>
-                                    <BsArrowRightCircle  fontSize={41}/>
-                                </div>
-                            </div>
-
-                        </div>
-                   </div>
-                )}
-            </div>
-
-        </section>
-        <section className=" flex flex-col gap-20">
-          <main className="bg-gradient-to-r from-start via-middle to-end w-full px-20 py-8 flex flex-col gap-4">
-             <h4 className="text-white font-satoshi text-4xl ">See Upcoming Auctions and Exhibitions</h4>
-               <div className="flex items-center ">
-                 <hr className=" text-white w-[600px]  h-px " />
-                 <div className="w-2 h-2 rounded-full bg-white "/>
-                <div />
-              </div>
-              {/* homeswiper */}
-              <Swipers/>
-          </main>
-          <div className="flex flex-col gap-10">
-            <hr />
-            <div className="flex justify-between items-center px-16">
-                <h5 className="font-satoshi text-2xl font-medium">
-                    Explore marketplace
-                </h5>
-                <BsArrowRightCircle  fontSize={41}/>
-            </div>
-            <hr />
-            <div className="flex justify-between items-center px-16">
-                <h5 className="font-satoshi text-2xl font-medium">
-                    See auctions
-                </h5>
-                <BsArrowRightCircle  fontSize={41}/>
-            </div>
-            <hr/>
-          </div>
-            
-        </section>
-        <section className="my-16 flex flex-col gap-16 bg-[#E2E2E2] p-16 relative">
-            <div className="flex justify-between">
-                <div>
-                    <h3 className="font-clash font-bold text-4xl uppercase w-[400px] leading-relaxed">top creators of the week</h3>
+    <main className="flex justify-center">
+        <div className="max-w-screen-2xl w-full">
+            <section className=''>
+                <div className='flex flex-col items-center gap-6 text-center lg:mt-20  mb-6'>
+                    <h3 className='text-3xl lg:text-6xl font-medium font-clash  w-[330px] md:w-[1000px] leading-normal'>Photography is poetry & beautiful untold stories</h3>
+                    <p className=' font-medium font-logo text-lg md:text-2xl leading-normal  w-[350px] md:w-[600px] lg:w-[800px] '>Flip through more than 10,000 vintage shots, old photograghs, historic images and captures seamlessly in one place. Register to get top access.</p>
                 </div>
-                <div className="flex  gap-4 items-start relative">
-                    <div className="h-full w-1 bg-[#AEAEAE] rounded-lg"/>
-                    <div className="h-1/4 bg-[#292929] w-1 absolute bottom-0 rounded-lg"/>
+                <div className="w-full">
+                    <ul className=' flex justify-between gap-6 w-full  items-center '>
+                        <li>
+                            <img src={homeimg1} alt='' />
+                        </li> 
+                        <li>
+                            <img src={homeimg2} alt='' />
+                        </li> 
+                        <li>
+                            <img src={homeimg3} alt=''/>
+                        </li>
+                        <li>
+                            <img src={homeimg4} alt=''/>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section className="my-16 md:mx-20 mx-4">
+                <h4 className="text-dark  font-bold  lg:font-medium font-satoshi text-3xl">Featured products</h4>
+                <div className=" md:mt-4">
+                    {
+                    Array.isArray(homepro) &&
+                    homepro.map(({img,title,discription,text,id})=>
+                    <div key={id} className="flex flex-col  lg:gap-8 gap-4 my-10">
+                        <div className="bg-[#333333] w-full h-px md:flex hidden"/>
+                            <div className={` flex  items-end lg:flex-row flex-col   gap-8 ${id === '2' ? 'lg:flex-row-reverse' :''}`}>
+                                <div className="relative  overflow-hidden w-full">
+                                    <img src={img} alt={title} />
+                                    <a href="/">
+                                            <div className="flex justify-center w-full items-center left-0 absolute top-0 gap-6 opacity-0 bg-global  h-full   lg:bg-opacity-0  lg:hover:opacity-70 hover:bg-opacity-100">
+                                                <p className="font-satoshi font-normal text-2xl text-[#fff] z-[999] ">View Product</p>
+                                                <BsArrowRightCircle  fontSize={31} color="white" className="z-[999] "/>
+                                            </div>
+                                    </a>
+                                
+                                </div>
+                                <div className="flex flex-col gap-4 md:gap-10">
+                                    <h6 className="font-medium font-clash text-4xl">{title}</h6>
+                                    <p className="text-gray font-normal text-xl font-satoshi">{discription}</p>
+                                    <div className="flex justify-between items-center">
+                                        <div className="flex items-center gap-4">
+                                            <ul className="flex items-center">
+                                                <li>
+                                                    <img src={creator1} alt="creator-img"/>
+                                                </li>
+                                                <li>
+                                                    <img src={creator2} alt="creator-img"/>
+                                                </li>
+                                                <li>
+                                                    <img src={creator3} alt="creator-img"/>
+                                                </li>
+                                                <li>
+                                                    <img src={creator4} alt="creator-img"/>
+                                                </li>
+                                            </ul>
+                                            <p className="font-satoshi md:font-normal font-semibold text-gray text-sm md:text-lg ">{text}</p>
+                                        </div>
+                                        <BsArrowRightCircle  fontSize={41} className="hidden md:flex"/>
+                                    </div>
+                                </div>
+
+                            </div>
+                    </div>
+                    )}
+                </div>
+
+            </section>
+            <section className=" flex flex-col gap-20">
+            <main className="bg-gradient-to-r from-start via-middle to-end w-full px-20 py-8 flex flex-col gap-4">
+                <h4 className="text-white font-satoshi text-4xl hidden md:flex ">See Upcoming Auctions and Exhibitions</h4>
+                <div className="lg:flex hidden items-center ">
+                    <hr className=" text-white w-[600px]  h-px " />
+                    <div className="w-2 h-2 rounded-full bg-white "/>
+                    <div />
+                </div>
+                {/* homeswiper */}
+                <Swipers/>
+            </main>
+            <div className="flex flex-col gap-10">
+                <hr />
+                <div className="flex justify-between items-center px-4 md:px-16">
+                    <h5 className="font-satoshi text-2xl font-medium">
+                        Explore marketplace
+                    </h5>
+                    <BsArrowRightCircle  fontSize={41}/>
+                </div>
+                <hr />
+                <div className="flex justify-between items-center px-4  md:px-16">
+                    <h5 className="font-satoshi text-2xl font-medium">
+                        See auctions
+                    </h5>
+                    <BsArrowRightCircle  fontSize={41}/>
+                </div>
+                <hr/>
+            </div>
+                
+            </section>
+            <section className="my-16 flex flex-col gap-8 md:gap-16 bg-[#E2E2E2] p-4 md:p-16 relative">
+                <div className="flex justify-between">
                     <div>
-                        <ul className=" flex flex-col gap-3 font-clash font-normal text-dark text-2xl">
-                            <li>Editorials</li>
-                            <li>Fashion</li>
-                            <li>Lifestyle</li>
-                            <li>Blueprint</li>
-                        </ul>
+                        <h3 className="font-clash font-bold text-2xl md:text-4xl uppercase  w-[200px] md:w-[400px] leading-relaxed">top creators of the week</h3>
+                    </div>
+                    <div className="flex  gap-4 items-start relative">
+                        <div className="h-full w-1 bg-[#AEAEAE] rounded-lg"/>
+                        <div className="h-1/4 bg-[#292929] w-1 absolute bottom-0 rounded-lg"/>
+                        <div>
+                            <ul className=" flex flex-col gap-3 font-clash font-normal text-dark text-2xl">
+                                <li>Editorials</li>
+                                <li>Fashion</li>
+                                <li>Lifestyle</li>
+                                <li>Blueprint</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className="flex justify-center">
-                <article className="w-[800px] font-clash font-extralight leading-relaxed text-xl">
-                 &#34;Everything always looked better in black and white. Everything always 
-                 as if it were the first time; there&rsquo;s always more people in a black and white
-                  photograph. It just makes it seem that there were more people at a gig, 
-                  more people at a football match, than with colour photography. Everything
-                   looks more exciting.&#34;&#8208; Jack Lowden
+                <div className="flex justify-center">
+                    <article className="w-[800px] font-clash font-extralight leading-relaxed text-md md:text-xl">
+                    &#34;Everything always looked better in black and white. Everything always 
+                    as if it were the first time; there&rsquo;s always more people in a black and white
+                    photograph. It just makes it seem that there were more people at a gig, 
+                    more people at a football match, than with colour photography. Everything
+                    looks more exciting.&#34;&#8208; Jack Lowden
 
-                </article> 
+                    </article> 
+                </div>
+                <div className="flex justify-end">
+                    <h3 className="font-clash font-extrabold text-4xl uppercase">Circa</h3>
+                </div>
+                <div className="flex justify-end">
+                <img src={date} alt=""  className="w-[150px] md:w-[500px]" />
+                </div>
+                <div className="absolute left-0  lg:left-[23rem] -bottom-12">
+                    <img src={topcreator1} alt="" className="w-[300px] md:w-[700px]"/>        
+                </div>
+            </section>
+            <div className="my-20">
+            <Newsletter/>
             </div>
-            <div className="flex justify-end">
-                <h3 className="font-clash font-extrabold text-4xl uppercase">Circa</h3>
-            </div>
-            <div className="flex justify-end">
-              <img src={date} alt=""  />
-            </div>
-            <div className="absolute left-[23rem] -bottom-12">
-                 <img src={topcreator1} alt="" width={700}/>
-                
-            </div>
-        </section>
-        <div className="mt-20">
-          <Newsletter/>
+            
         </div>
-        
-    </div>
+
+    </main>
   )
 }
 

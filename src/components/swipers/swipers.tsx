@@ -10,9 +10,9 @@ const Swipers = () => {
         >
         <SwiperSlide className='relative'>
             <div>
-               <img src={homeslider} alt=""  />
+               <img src={homeslider} alt=""  className=''/>
             </div>
-            <div className='absolute bottom-10 flex justify-between items-end text-white px-10 py-1 w-full'>
+            <div className='absolute bottom-10 flex justify-between items-end text-white px-4 md:px-10 py-1 w-full'>
                <main className='flex gap-4 items-center'>
                  <div> <h5 className='font-bellefair text-7xl font-thin '> 01</h5></div>
                  <div className='flex flex-col gap-4'>

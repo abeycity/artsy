@@ -7,6 +7,7 @@ import Marketplace from "./pages/marketplace";
 import Auctions from "./pages/auctions";
 import Drops from "./pages/drops"
 import Cart from './pages/cart'
+import Productdetail from "./pages/productdetail";
 
 const Route =()=>{
     const router = createBrowserRouter([
@@ -14,9 +15,14 @@ const Route =()=>{
           path: "/",
           element: <Homepage/>,
         },
+
         {
           path: "marketplace",
           element: <Marketplace/>,
+        }, 
+        {
+          path: "marketplace/:id",
+          element: <Productdetail/>,
         },
         {
           path: "auctions",
@@ -34,6 +40,7 @@ const Route =()=>{
       
 return(
     <RouterProvider router={router} />
+    
   )
 }
 

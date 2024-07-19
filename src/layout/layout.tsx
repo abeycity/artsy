@@ -7,6 +7,8 @@ import Marketplace from '../pages/marketplace';
 import Auctions from '../pages/auctions';
 import Drops from '../pages/drops';
 import Cart from '../pages/cart';
+import Productdetail from '../pages/productdetail';
+import Breadcrumb from '../components/Breadcrumbs/breadcrumb';
 
 const Layout = ({ children }: { children: ReactNode }) => {
   return (
@@ -21,9 +23,11 @@ const Layout = ({ children }: { children: ReactNode }) => {
 const LayoutWithRoutes = () => {
   return (
     <Layout>
+         <Breadcrumb/>
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="marketplace" element={<Marketplace />} />
+        <Route path="marketplace/:id" element={<Productdetail />} />
         <Route path="auctions" element={<Auctions />} />
         <Route path="drops" element={<Drops />} />
         <Route path="cart" element={<Cart />} />

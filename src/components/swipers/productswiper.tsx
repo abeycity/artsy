@@ -15,6 +15,26 @@ const Productswiper = () => {
         scrollbar={{ draggable: true }}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log('slide change')}
+        breakpoints={{
+
+            360: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 4,
+              spaceBetween: 40,
+            },
+            // 1024: {
+            //   slidesPerView: 5,
+            //   spaceBetween: 50,
+            // },
+          }}
+    
     >
      
         <SwiperSlide>
