@@ -35,6 +35,11 @@ import date from './images/1985.png'
 import love from './images/love.png'
 import loved from './images/loved.png'
 import eth from './images/eth.png'
+import secure from './images/lock.png'
+import metamask from './images/MetaMask.png'
+import coinbase from './images/Coinbase.png'
+import phantom from './images/Phantom.png'
+import wallect from './images/WalletConnect.png'
 
 export{
     homeimg1,
@@ -73,6 +78,12 @@ export{
      date,
      love,
      loved,
-     eth
+     eth,
+     secure,
+     metamask,
+     coinbase,
+     phantom,
+     wallect
+     
 
 }

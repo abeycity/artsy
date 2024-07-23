@@ -1,14 +1,43 @@
 
 import { BsArrowRightCircle } from "react-icons/bs";
-import { creator1, creator2, creator3, creator4, date, homeimg1, homeimg2, homeimg3, homeimg4, topcreator1} from '../assets'
+import { creator1, creator2, creator3, creator4, date, homeimg1, homeimg2, homeimg3, homeimg4, topcreator1, topcreator2, topcreator3, } from '../assets'
 import { homepro } from '../utlis/variable'
 import Swipers from "./swipers/swipers";
 import Newsletter from "../newsletter/newsletter";
+import {  useState,useEffect} from "react";
 
 const Homepage = () => {
+    
+    const Topcreatorscycle=()=>{
+        const images=[topcreator1,topcreator2,topcreator3]
+        const [currentImage, setCurrentImage] = useState(images[0]);
+      
+
+         const updateImage = () => {
+            setCurrentImage(prevImage => {
+              const currentIndex = images.indexOf(prevImage);
+              const nextIndex = (currentIndex + 1) % images.length;
+              return images[nextIndex];
+            });
+          };
+
+          useEffect(() => {
+            const intervalId = setInterval(updateImage, 5000); // Update every 5 second
+            // Step 4: Cleanup function to clear the interval
+            return () => {
+              clearInterval(intervalId);
+            };
+          }, []); // Empt
+        return(
+            
+            <div>
+            <img src={currentImage} alt="" className="w-[350px] md:w-[700px]"/>        
+        </div>
+        )     
+     }
 
   return (
-    <main className="flex justify-center">
+    <main className="flex justify-center w-full border-gray border overflow-hidden">
         <div className="max-w-screen-2xl w-full">
             <section className=''>
                 <div className='flex flex-col items-center gap-6 text-center lg:mt-20  mb-6'>
@@ -112,7 +141,7 @@ const Homepage = () => {
             </div>
                 
             </section>
-            <section className="my-16 flex flex-col gap-8 md:gap-16 bg-[#E2E2E2] p-4 md:p-16 relative">
+            <section className="my-16 flex flex-col gap-8 md:gap-16 bg-[#E2E2E2] p-4 md:p-16 relative w-full">
                 <div className="flex justify-between">
                     <div>
                         <h3 className="font-clash font-bold text-2xl md:text-4xl uppercase  w-[200px] md:w-[400px] leading-relaxed">top creators of the week</h3>
@@ -146,9 +175,9 @@ const Homepage = () => {
                 <div className="flex justify-end">
                 <img src={date} alt=""  className="w-[150px] md:w-[500px]" />
                 </div>
-                <div className="absolute left-0  lg:left-[23rem] -bottom-12">
-                    <img src={topcreator1} alt="" className="w-[300px] md:w-[700px]"/>        
-                </div>
+                 <div  className="absolute left-4  lg:left-[23rem] -bottom-12">
+                    <Topcreatorscycle/>
+                 </div>
             </section>
             <div className="my-20">
             <Newsletter/>

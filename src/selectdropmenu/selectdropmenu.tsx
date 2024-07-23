@@ -3,13 +3,13 @@ import { useState } from "react";
 import { selectDropMenuProps } from "../utlis/types"
 import { FaAngleDown } from "react-icons/fa";
 
-const Selectdropmenu:React.FC<selectDropMenuProps>=({classname,value,placeholder,options, children,grid,onChange}) => {
+const Selectdropmenu:React.FC<selectDropMenuProps>=({classname,value,placeholder,options,styleclass, children,grid,onChange}) => {
    
     const [open,setOpen]=useState(false);
   return (
     <div className={`${classname}`}>
-        <div className='w-full border border-dark relative px-1'>
-           <div className='justify-between flex items-center gap-2 px-2 '
+        <div className='w-full border border-gray  relative px-1'>
+           <div className={`${styleclass} justify-between flex items-center gap-2`}
                  onClick={ ()=> setOpen((prev)=>!prev)}
                  tabIndex={0}
                  >
@@ -26,7 +26,7 @@ const Selectdropmenu:React.FC<selectDropMenuProps>=({classname,value,placeholder
                           setOpen(false)
                         }}
                         >
-                            <div className={`${value === option ? "bg-dark" : "bg-gray"} w-full flex flex-row-revers gap-4 px-4 py-2`}>
+                            <div className={`${value === option ? "bg-dark" : "bg-gray"} w-full flex flex-row-revers gap-4 px-4 py-2 z-[99999]`}>
                                 { grid ? <div>{children}</div> : null } 
                                 <p>{option}</p> 
 

@@ -1,5 +1,5 @@
 
-const Checkbox = ({label,selected,styleClass,onChange}:{label:string,selected:boolean,styleClass:string,}) => {
+const Checkbox = ({label,selected,styleClass,onChange}:{label:string,selected:boolean,styleClass:string, onChange:()=>void}) => {
 
     const handleChange=(e)=>{
         e.preventDefault()

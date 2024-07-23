@@ -1,4 +1,4 @@
-
+import {useNavigate} from 'react-router-dom'
 import { FaArrowRight } from 'react-icons/fa'
 import {love} from '../assets'
 import Button from '../components/button/button'
@@ -11,6 +11,7 @@ import { products } from '../utlis/variable'
 
 const Productdetail = () => {
     const  params=useParams()
+    const navigate=useNavigate()
     const item=products.find((i)=>i.name === params?.id)
     if(!item){
         return (
@@ -24,9 +25,13 @@ const Productdetail = () => {
         )
     }
 
+    const handleclick=()=>{
+        navigate("/marketplace/shoppingcart")
+    }
+
   return (
     <main className='flex justify-center'>
-        <div className='max-w-screen-2xl'>
+        <div className='max-w-screen-2xl w-full'>
             <div className=' flex justify-center'>
               
                 <div className=' flex lg:border lg:flex-row flex-col  '>
@@ -50,7 +55,7 @@ const Productdetail = () => {
                                     <span>+</span>
                                 </div>                 
                                 <div className='flex items-center gap-6'>
-                                    <Button classname='px-8 md:px-16 py-3  bg-[#272727]'>
+                                    <Button classname='px-8 md:px-16 py-3  bg-[#272727]' onclick={handleclick}> 
                                         <div className='flex items-center gap-4'>
                                             <p className='text-lg text-white'>Add to cart</p>
                                             <FaArrowRight color='#fff'/>
@@ -109,7 +114,7 @@ const Productdetail = () => {
                    <Productswiper/>
                 </div>
                 <div className='flex justify-center my-10'>
-                   <Button classname='px-16 py-3 border-2 text-xl font-medium rounded-lg '>Explore all</Button>
+                   <Button classname='px-16 py-3 border-2 text-xl font-medium rounded-lg'>Explore all</Button>
                 </div>
             </section>
        </div>

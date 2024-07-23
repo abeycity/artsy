@@ -5,15 +5,15 @@ import { bids } from "../utlis/variable"
 
 const Auctions = () => {
   return (
-    <main className="flex justify-center ">
-      <div className="max-w-screen-2xl">
+    <main className="flex justify-center overflow-hidden">
+      <div className="max-w-screen-2xl w-full">
           <h6 className="mx-4 md:mx-16 my-8 font-bold font-satoshi">Here&rsquo;s an overview of products actively on auction, explore!</h6>
           <div className="mx-4 md:ml-16">
             <Auctionswiper/>
           </div>
           <section className="m-4 md:m-16 flex flex-col gap-8">
               <h5 className="font-satoshi font-bold text-xl md:text-2xl">Top bids from popular creators</h5>
-              <div className="flex md:flex-row flex-col  gap-10 justify-between ">
+              <div className="flex md:flex-row flex-col gap-12 justify-around  ">
                   {
                       Array.isArray(bids) && 
                       bids.map(({img,creator,date,highestbid,currentbid,name},i)=>

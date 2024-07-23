@@ -10,7 +10,8 @@ export type hproProps={
 export type Buttonprop={
     children:ReactNode,
     outline?:boolean,
-    classname?:string
+    classname?:string,
+    onclick?:()=>void
 }
 export type DropProps={
     img:StaticImport,
@@ -30,6 +31,7 @@ export type bidProps={
 }
 export type selectDropMenuProps={
     classname?:string,
+    styleclass?:string
     placeholder:string,
     options:string[],
    value:string,

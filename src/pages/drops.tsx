@@ -11,14 +11,14 @@ const Drops = () => {
               <p className="font-satoshi text-gray font-normal text-xl  text-center p-4">Turn on notification so that no drops will miss you.</p>
               <Button classname="font-semibold font-satoshi border px-16 py-2 text-xl">Notify me </Button>
           </div>
-          <section className="flex flex-col gap-4 md:gap-10 mb-20">
+          <section className="flex flex-col gap-4 lg:gap-10 mb-20">
               {Array.isArray(drops) &&
               drops.map(({img,event,name,desc,creator,notify})=>
-                <div key={name} className="flex lg:flex-row flex-col p-4 gap-4 md:gap-8">
-                  <div className="relative">
-                    <img src={img} alt={name}  />
-                    <figcaption className="absolute bottom-2 w-full md:px-16  px-6 py-3 ">
-                      <div className="flex flex-col gap-2 md:gap-4 bg-[#F5F4F43D] backdrop-blur-2  bg-opacity-70 p-1 px-2 md:p-6 rounded-xl ring ring-[#f2f2f2] ring-opacity-50 ">
+                <div key={name} className="flex xl:flex-row flex-col p-4 gap-4 md:gap-8 w-full relative">
+                  <div className="relative w-full lg:p-2">
+                    <img src={img} alt={name} />
+                    <figcaption className="absolute bottom-4 w-full md:px-16  px-6 py-3 ">
+                      <div className="flex flex-col gap-2 md:gap-4 bg-[#F5F4F43D] backdrop-blur-2  bg-opacity-70 p-1 px-4 md:p-6 rounded-xl ring ring-[#f2f2f2] ring-opacity-50 ">
                           <p className="font-satoshi text-sm md:text-xl text-white z-[9999]">Time remaining</p>
                           <div className="flex justify-between items-end text-white font-satoshi">
                             <p className="font-medium text-xl  md:text-2xl  z-[9999] ">06  hrs : 45 min : 22 s</p>
