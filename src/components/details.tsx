@@ -48,7 +48,7 @@ const Details = ({handleclick}:{handleclick:()=>void}) => {
                   <input type='number' placeholder='123111111111' name='number' className='bg-[#F2F2F2] py-4 px-6 rounded-md  border border-gray w-full'/>                    
             </div>
            <div className='w-full'>
-             <Button classname="bg-[#000] text-[#f2f2f2] text-center text-2xl py-6 rounded-md" onclick={handleclick} >Proceed to payment</Button>
+             <Button classname="bg-[#000] text-[#f2f2f2] text-center text-2xl py-6 rounded-md hover:bg-[#006CA2] hover:ease-in duration-200" onclick={handleclick} >Proceed to payment</Button>
            </div>
       </form>
   )

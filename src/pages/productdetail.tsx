@@ -55,7 +55,7 @@ const Productdetail = () => {
                                     <span>+</span>
                                 </div>                 
                                 <div className='flex items-center gap-6'>
-                                    <Button classname='px-8 md:px-16 py-3  bg-[#272727]' onclick={handleclick}> 
+                                    <Button classname='px-8 md:px-16 py-3  bg-[#272727] hover:bg-[#006CA2] hover:ease-in duration-200'  onclick={handleclick} > 
                                         <div className='flex items-center gap-4'>
                                             <p className='text-lg text-white'>Add to cart</p>
                                             <FaArrowRight color='#fff'/>

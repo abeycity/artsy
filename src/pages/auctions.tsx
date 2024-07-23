@@ -44,7 +44,7 @@ const Auctions = () => {
                                   <p className="font-satoshi font-medium  text-xl text-[#616161]">Current bid</p>
                                   <p  className="font-satoshi font-bold text-xl">{currentbid}ETH</p>
                               </div>
-                              <Button classname=" bg-[#272727] px-8 lg:px-16 py-4 text-white border border-dark ">Place bid</Button>
+                              <Button classname=" bg-[#272727] px-8 lg:px-16 py-4 text-white border border-dark hover:bg-[#006CA2] hover:ease-in ">Place bid</Button>
                             </div>
                           </div>
                       )

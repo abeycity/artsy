@@ -6,7 +6,6 @@ import Homepage from '../components/homepage';
 import Marketplace from '../pages/marketplace';
 import Auctions from '../pages/auctions';
 import Drops from '../pages/drops';
-import Cart from '../pages/cart';
 import Productdetail from '../pages/productdetail';
 import Shoppingcart from '../pages/steppers/shoppingcart';
 import Paymentdetails from '../pages/steppers/paymentdetails';

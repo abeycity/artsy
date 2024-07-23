@@ -15,7 +15,7 @@ const Shoppingdetails = () => {
           <div className='w-full'>
           <Details handleclick={handleclick}/>
           </div>
-          <div className='w-full'>
+          <div className='w-full hidden xl:block'>
           <CartItems proceed/>
           </div>
         </div>

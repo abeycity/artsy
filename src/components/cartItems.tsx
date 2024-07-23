@@ -71,23 +71,23 @@ const CartItems = ({handleclick,navigate,proceed}:{handleclick?:()=>void,navigat
                 </div>
             </section>
            :
-            <section className="flex justify-between gap-10 px-6 py-8 border-t mt-10">
+            <section className="flex flex-col-reverse justify-between gap-10 px-6 py-8 border-t mt-10 md:flex-row ">
                 <div className="w-full flex flex-col gap-4 items-center">
-                    <Button classname="lg:px-16 bg-dark text-white py-4 text-2xl rounded-md" onclick={handleclick}>Proceed to checkout</Button>
+                    <Button classname=" px-8 lg:px-16 bg-dark text-white py-4 text-2xl rounded-md hover:bg-[#006CA2] hover:ease-in " onclick={handleclick}>Proceed to checkout</Button>
                     <Button outline  classname=" text-xl font-medium" onclick={()=>{navigate(-1)}}>Continue shopping</Button>
                 </div>
                 <div className="flex flex-col items-end w-full px-6 gap-6">
                     <div  className="flex items-center justify-between w-full">
                     <p className="text-xl font-light text-[#888888]">Product in cart</p>
-                    <p className="text-xl font-light">3 items</p>
+                    <p className="text-xl font-medium">3 items</p>
                     </div>
                     <div  className="flex items-center justify-between w-full">
                         <p className="text-xl font-light text-[#888888]">Shipping:</p>
-                    <p className="text-xl font-light">$2.50</p>
+                    <p className="text-xl font-medium">$2.50</p>
                     </div>
-                    <div className="flex items-center justify-between w-full">
+                    <div className="flex items-center justify-between w-full max-sm:border-t-2 max-sm:border-dashed pt-4">
                     <p className="text-xl font-light text-[#888888]">Total:</p>
-                    <p className="text-xl font-light ">$114.00</p>
+                    <p className="text-xl font-medium ">$114.00</p>
                     </div>
                 </div>
             </section>

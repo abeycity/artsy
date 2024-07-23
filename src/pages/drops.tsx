@@ -9,7 +9,7 @@ const Drops = () => {
           <div className="flex flex-col items-center gap-2 md:gap-6">
               <h3 className="font-satoshi text-[#000000] font-semibold text-2xl">Upcoming drops</h3>
               <p className="font-satoshi text-gray font-normal text-xl  text-center p-4">Turn on notification so that no drops will miss you.</p>
-              <Button classname="font-semibold font-satoshi border px-16 py-2 text-xl">Notify me </Button>
+              <Button classname="font-semibold font-satoshi border px-16 py-2 text-xl hover:bg-[#006CA2] hover:ease-in duration-200  hover:text-white">Notify me </Button>
           </div>
           <section className="flex flex-col gap-4 lg:gap-10 mb-20">
               {Array.isArray(drops) &&

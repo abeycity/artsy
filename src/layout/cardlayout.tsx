@@ -10,8 +10,8 @@ const Cardlayout = ({content}:{content:ProductProps[]}) => {
              content.map(({img,name,price})=>(
              <Link to={`/marketplace/${name}`} key={name}>
                 <div  className='flex flex-col gap-3 bg-[#fff]  shadow-md shadow-gray ring-2 ring-[#f7f7f7] rounded-lg p-4'  >
-                      <div className='rounded-lg overflow-hidden'>
-                      <img src={img} alt=""  />
+                      <div className='rounded-lg overflow-hidden object-cover'>
+                      <img src={img} alt="" />
                       </div>
                       <div className='flex flex-col items-start'>
                         <h3  className=''>{name}</h3>

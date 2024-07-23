@@ -31,7 +31,7 @@ const Stepper = () => {
                   <div className='relative'>  
                     <p className={`${isCurrent ? "text-dark font-semibold " : isCompleted  ? "text-gray font-medium" : " text-[#888888]"}font-satoshi font-normal text-xl `}> {title}</p>
                   </div>
-                  <span className={`${isCurrent ? "bg-dark" : isCompleted  ? "bg-middle" : " bg-gray"} absolute   w-[170px] my-1 h-[2px] lg:h-1`}></span>                   
+                  <span className={`${isCurrent ? "bg-dark" : isCompleted  ? "bg-middle" : " bg-gray"} absolute   max-sm:w-[150px] w-[170px] my-1 h-[2px] lg:h-1`}></span>                   
                </li>
              }
              )  

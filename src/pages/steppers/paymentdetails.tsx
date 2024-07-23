@@ -6,7 +6,7 @@ import Button from "../../components/button/button"
 const Paymentdetails = () => {
   const navigate=useNavigate()
   const handleclick=()=>{
-    navigate("/deliver")
+    navigate("/delivery")
   }
   return (
     <section className='flex justify-center'>
@@ -16,15 +16,17 @@ const Paymentdetails = () => {
             <h6 className="text-2xl font-medium">Payment method</h6>
               <form action="">
                 <section className=" flex flex-col gap-6 py-4 px-8 shadow-md rounded-md shadow-gray ring-2 ring-[#f7f7f7] ">
-                    <div className="flex items-center gap-6 ">
-                      <input type="radio"  name="radio"/>
-                        <p className="text-xl font-semibold">Select your wallet</p>
+                    <div className="flex  max-sm:flex-col items-center gap-6 ">
+                      <div className="flex gap-4">
+                        <input type="radio"  name="radio"/>
+                         <p className="text-xl font-semibold">Select your wallet</p>
+                      </div>
                       <div>
                         <div className="flex gap-1">
-                          <img src={metamask} alt="" srcset="" />
-                          <img src={coinbase} alt="" srcset="" />
-                          <img src={phantom} alt="" srcset="" />
-                          <img src={wallect} alt="" srcset="" />
+                          <img src={metamask} alt=""  />
+                          <img src={coinbase} alt=""  />
+                          <img src={phantom} alt="" />
+                          <img src={wallect} alt=""  />
                         </div>
                       </div>
                     </div>
@@ -49,17 +51,17 @@ const Paymentdetails = () => {
                   </div>
                   <div className="flex items-center gap-6 py-6">
                     <input type="checkbox" name="check" id="check" />
-                    <label htmlFor="check" className='text-[#888888]  text-xl'>Save my wallet details &  information  for future transactions</label>
+                    <label htmlFor="check" className='text-[#888888]  text-sm md:text-xl'>Save my wallet details &  information  for future transactions</label>
                   </div>
 
                 </section>
-                  <Button classname="w-full text-center bg-[#000] p-8 mt-10 text-[#f5f5f5] text-2xl font-medium rounded-md" onclick={handleclick}>Confirm</Button>
+                  <Button classname="w-full text-center bg-[#000] p-8 mt-10 text-[#f5f5f5] text-2xl font-medium rounded-md hover:bg-[#006CA2] hover:ease-in duration-200" onclick={handleclick}>Confirm</Button>
               </form>
            </div>
-           <div className="w-full flex flex-col gap-10">
+           <div className="w-full xl:flex flex-col gap-10 hidden">
              <div className="justify-end flex w-full">
                 <div className="flex gap-4 items-center">
-                  <img src={secure} alt="" srcset="" />
+                  <img src={secure} alt=""  />
                   <p className='text-[#888888]  text-2xl'>Secure server</p>
                 </div>
              </div>

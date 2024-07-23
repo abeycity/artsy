@@ -5,6 +5,7 @@ import { homepro } from '../utlis/variable'
 import Swipers from "./swipers/swipers";
 import Newsletter from "../newsletter/newsletter";
 import {  useState,useEffect} from "react";
+import { Link } from "react-router-dom";
 
 const Homepage = () => {
     
@@ -37,7 +38,7 @@ const Homepage = () => {
      }
 
   return (
-    <main className="flex justify-center w-full border-gray border overflow-hidden">
+    <main className="flex justify-center w-full   overflow-hidden">
         <div className="max-w-screen-2xl w-full">
             <section className=''>
                 <div className='flex flex-col items-center gap-6 text-center lg:mt-20  mb-6'>
@@ -72,12 +73,12 @@ const Homepage = () => {
                             <div className={` flex  items-end lg:flex-row flex-col   gap-8 ${id === '2' ? 'lg:flex-row-reverse' :''}`}>
                                 <div className="relative  overflow-hidden w-full">
                                     <img src={img} alt={title} />
-                                    <a href="/">
+                                    <Link to="/marketplace">
                                             <div className="flex justify-center w-full items-center left-0 absolute top-0 gap-6 opacity-0 bg-global  h-full   lg:bg-opacity-0  lg:hover:opacity-70 hover:bg-opacity-100">
                                                 <p className="font-satoshi font-normal text-2xl text-[#fff] z-[999] ">View Product</p>
                                                 <BsArrowRightCircle  fontSize={31} color="white" className="z-[999] "/>
                                             </div>
-                                    </a>
+                                    </Link>
                                 
                                 </div>
                                 <div className="flex flex-col gap-4 md:gap-10">
@@ -112,7 +113,7 @@ const Homepage = () => {
 
             </section>
             <section className=" flex flex-col gap-20">
-            <main className="bg-gradient-to-r from-start via-middle to-end w-full px-20 py-8 flex flex-col gap-4">
+            <main className="bg-gradient-to-r from-start via-middle to-end w-full p-3 md:px-6 xl:px-20 py-8 flex flex-col gap-4">
                 <h4 className="text-white font-satoshi text-4xl hidden md:flex ">See Upcoming Auctions and Exhibitions</h4>
                 <div className="lg:flex hidden items-center ">
                     <hr className=" text-white w-[600px]  h-px " />

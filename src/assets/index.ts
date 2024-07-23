@@ -40,7 +40,7 @@ import metamask from './images/MetaMask.png'
 import coinbase from './images/Coinbase.png'
 import phantom from './images/Phantom.png'
 import wallect from './images/WalletConnect.png'
-
+import deliveryhero from './images/deliveryimg.png'
 export{
     homeimg1,
     homeimg2,
@@ -83,7 +83,8 @@ export{
      metamask,
      coinbase,
      phantom,
-     wallect
+     wallect,
+     deliveryhero
      
 
 }

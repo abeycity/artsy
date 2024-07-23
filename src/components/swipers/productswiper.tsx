@@ -21,12 +21,12 @@ const Productswiper = () => {
               slidesPerView: 1,
               spaceBetween: 20,
             },
-            640: {
+            760: {
               slidesPerView: 2,
               spaceBetween: 20,
             },
-            768: {
-              slidesPerView: 4,
+            1024: {
+              slidesPerView: 3,
               spaceBetween: 40,
             },
             // 1024: {

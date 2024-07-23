@@ -1,7 +1,7 @@
 import { IoSearch } from "react-icons/io5";
 import { HiOutlineShoppingCart } from "react-icons/hi";
 import { CiBellOn } from "react-icons/ci";
-import { NavLink,} from "react-router-dom";
+import { Link, NavLink,} from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 
 
@@ -15,7 +15,9 @@ const Nav = ({NAV,}:{NAV:{Path:string,label:string}[]}) => {
           <div className="lg:hidden">
             <FaBars/>
           </div>
-          <h3 className="font-bold font-logo text-2xl">ARTSY.</h3>
+          <Link to={"/"}>
+            <h3 className="font-bold font-logo text-2xl cursor-pointer">ARTSY.</h3>
+          </Link>
             <div className="hidden lg:block">
               <ul className="flex items-center gap-6 text-global font-satoshi text-xl font-normal">
                { NAV.map(({Path,label},i)=>
