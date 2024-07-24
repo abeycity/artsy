@@ -3,18 +3,29 @@ import { HiOutlineShoppingCart } from "react-icons/hi";
 import { CiBellOn } from "react-icons/ci";
 import { Link, NavLink,} from "react-router-dom";
 import { FaBars } from "react-icons/fa";
+import { useState } from "react";
+import MobileNav from "./mobilenav";
 
 
 
-const Nav = ({NAV,}:{NAV:{Path:string,label:string}[]}) => {
+const Nav = ({NAV}:{NAV:{Path:string,label:string}[]}) => {
+  const [navbar,setNavbar]=useState(false)
+  const  handlenavbar=()=>{
+    setNavbar((prev)=>!prev)
   
+  }
   
   return (
       <header className="text-global  p-6 relative flex  justify-center w-full lg:px-16 ">
         <section className="flex items-center justify-between max-w-screen-2xl w-full ">
-          <div className="lg:hidden">
-            <FaBars/>
+          <div className="lg:hidden" onClick={handlenavbar}>
+            <FaBars/> 
           </div>
+          {
+            navbar && <div className='absolute  bg-[#f6f6f6] w-full min-h-screen top-0 left-0 z-[999]'>
+               <MobileNav handlenavbar={handlenavbar} NAV={NAV}/>
+            </div>
+          }
           <Link to={"/"}>
             <h3 className="font-bold font-logo text-2xl cursor-pointer">ARTSY.</h3>
           </Link>

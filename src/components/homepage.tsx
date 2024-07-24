@@ -32,7 +32,7 @@ const Homepage = () => {
         return(
             
             <div>
-            <img src={currentImage} alt="" className="w-[350px] md:w-[700px]"/>        
+            <img src={currentImage} alt="" />        
         </div>
         )     
      }
