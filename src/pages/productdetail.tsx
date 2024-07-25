@@ -28,7 +28,7 @@ const Productdetail = () => {
     const handleclick=()=>{
         navigate("/marketplace/shoppingcart")
     }
-
+ 
   return (
     <main className='flex justify-center'>
         <div className='max-w-screen-2xl w-full'>
