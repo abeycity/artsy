@@ -15,18 +15,18 @@ const Paymentdetails = () => {
   return (
     <section className='flex justify-center'>
       <main className='max-w-screen-2xl w-full'>
-        <div className='mt-10 flex  justify-between gap-8 py-8 w-full px-8'>
+        <div className='mt-10 flex  justify-between gap-8 py-8 w-full md:px-8 px-3'>
            <div className="w-full flex flex-col gap-6">
             <h6 className="text-2xl font-medium">Payment method</h6>
               <form action="">
-                <section className=" flex flex-col gap-6 py-4 px-8 shadow-md rounded-md shadow-gray ring-2 ring-[#f7f7f7] ">
+                <section className=" flex flex-col gap-6 py-4 md:px-8  px-3 shadow-md rounded-md shadow-gray ring-2 ring-[#f7f7f7] ">
                     <div className="flex  max-sm:flex-col items-center gap-6 ">
                       <div className="flex gap-4">
                         <input type="radio"  name="radio"/>
                          <p className="text-xl font-semibold">Select your wallet</p>
                       </div>
                       <div>
-                        <div className="flex gap-1">
+                        <div className="flex gap-1 ">
                           <img src={metamask} alt=""  />
                           <img src={coinbase} alt=""  />
                           <img src={phantom} alt="" />
