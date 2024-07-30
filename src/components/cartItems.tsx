@@ -24,10 +24,10 @@ const CartItems = ({handleclick,goBack,proceed}:{handleclick?:()=>void,goBack?:(
                                         <img src={e.img} alt="" className="max-h-[150px] max-w-[150px]" />
                                         <div className="flex flex-col items-start gap-4">
                                         <p className="text-xl md:text-2xl font-medium">{e.name}</p>
-                                            <div className="flex  gap-6 items-center"> 
-                                            <FaMinus fontSize={21} onClick={()=>removeFromCart(e.id)}/>
-                                            <p className="text-2xl font-semibold">{cartItem[e.id]}</p>
-                                            <FaPlus fontSize={21}  onClick={()=>addToCart(e.id)} />
+                                            <div className="flex gap-1 md:gap-6 items-center"> 
+                                               <FaMinus fontSize={21} onClick={()=>removeFromCart(e.id)}/>
+                                               <p className="text-xl md:text-2xl font-semibold">{cartItem[e.id]}</p>
+                                              <FaPlus fontSize={21}  onClick={()=>addToCart(e.id)} />
                                             </div>
                                         </div>
                                     </main>

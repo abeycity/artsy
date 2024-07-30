@@ -15,6 +15,7 @@ import Stepper from '../pages/steps';
 import Delivery from '../pages/delivery';
 import { GlobalProvider } from '../components/context/shopcontext';
 import { Toaster } from 'react-hot-toast';
+import ScrollToTop from '../components/scrolltotop';
 
 const Layout = ({ children }: { children: ReactNode }) => {
     const NAV=[
@@ -53,6 +54,7 @@ const LayoutWithRoutes = () => {
   
   return (
     <Layout>
+      <ScrollToTop/>
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route  path="marketplace" element={<Marketplacelayout/>}>
