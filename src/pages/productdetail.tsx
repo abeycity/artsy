@@ -1,4 +1,4 @@
-import {useNavigate} from 'react-router-dom'
+
 import { FaArrowRight } from 'react-icons/fa'
 import {love} from '../assets'
 import Button from '../components/button/button'
@@ -6,12 +6,15 @@ import Accordion from '../components/Accordion/Accordion'
 import Productswiper from '../components/swipers/productswiper'
 import { useParams } from 'react-router-dom'
 import { products } from '../utlis/variable'
+import { useGlobalContext } from '../components/context/shopcontext'
+
 
 
 
 const Productdetail = () => {
     const  params=useParams()
-    const navigate=useNavigate()
+     const {addToCart}=useGlobalContext()
+  
     const item=products.find((i)=>i.name === params?.id)
     if(!item){
         return (
@@ -26,7 +29,8 @@ const Productdetail = () => {
     }
 
     const handleclick=()=>{
-        navigate("/marketplace/shoppingcart")
+          addToCart(item.id)
+        console.log(item.id)
     }
  
   return (
@@ -48,12 +52,7 @@ const Productdetail = () => {
                         <div className='flex flex-col gap-4 px-8 py-10 border-b'>
                                 <p className='text-2xl'>Creator: <span className=' font-medium text-middle'>{item.creator}</span></p>
                                 <p className='text-xl'>{item.country}</p>
-                                <p className='text-2xl font-medium'>Total views : <span>{item.views}k views</span></p>
-                                <div className='flex gap-4 items-center font-semibold text-3xl'>
-                                    <span>-</span>
-                                    <p>1</p>
-                                    <span>+</span>
-                                </div>                 
+                                <p className='text-2xl font-medium'>Total views : <span>{item.views}k views</span></p>                 
                                 <div className='flex items-center gap-6'>
                                     <Button classname='px-8 md:px-16 py-3  bg-[#272727] hover:bg-[#006CA2] hover:ease-in duration-200'  onclick={handleclick} > 
                                         <div className='flex items-center gap-4'>
@@ -117,8 +116,8 @@ const Productdetail = () => {
                    <Button classname='px-16 py-3 border-2 text-xl font-medium rounded-lg'>Explore all</Button>
                 </div>
             </section>
+         {/* <CartItems/> */}
        </div>
-
     </main>
     )
 }

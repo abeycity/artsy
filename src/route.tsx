@@ -6,7 +6,6 @@ import Homepage from './components/homepage'
 import Marketplace from "./pages/marketplace";
 import Auctions from "./pages/auctions";
 import Drops from "./pages/drops"
-import Cart from './pages/cart'
 import Productdetail from "./pages/productdetail";
 
 const Route =()=>{
@@ -31,10 +30,6 @@ const Route =()=>{
         {
           path: "drops",
           element: <Drops/>,
-        },
-        {
-          path: "cart",
-          element:<Cart/>
         },
       ]);
       

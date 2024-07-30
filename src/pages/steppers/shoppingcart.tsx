@@ -12,7 +12,7 @@ const Shoppingcart = () => {
     navigate(-1)
   }
   return (
-    <div className="flex justify-center my-16">
+    <div className="flex justify-center my-16 overflow-hidden">
         <section className="max-w-screen-2xl w-full font-satoshi">
            <CartItems handleclick={handleclick} goBack={goBack}/>
         </section>

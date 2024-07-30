@@ -9,8 +9,8 @@ const Shoppingdetails = () => {
      navigate("/marketplace/shoppingcart/paymentdetails")
    }
   return (
-    <section className='flex justify-center'>
-      <main className='max-w-screen-2xl w-full'>
+    <section className='flex justify-center overflow-hidden'>
+      <main className='max-w-screen-2xl w-full '>
         <div className='mt-10 flex flex-between items-start w-full'>
           <div className='w-full'>
           <Details handleclick={handleclick}/>
@@ -19,7 +19,6 @@ const Shoppingdetails = () => {
           <CartItems proceed/>
           </div>
         </div>
-
       </main>
     </section>
   )

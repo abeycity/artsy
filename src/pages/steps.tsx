@@ -19,7 +19,7 @@ const Stepper = () => {
    console.log(paths)
   return (
     <div className='flex justify-center lg:my-10'>
-      <div className='max-w-screen-2xl w-full px-4 lg:px-16 '>
+      <div className='max-w-screen-2xl w-full px-4 lg:px-16 relative overflow-hidden'>
         <section className='flex justify-center w-full'>
           <ul className='flex items-center gap-6'>
            {

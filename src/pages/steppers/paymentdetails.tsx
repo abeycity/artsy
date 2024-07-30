@@ -1,13 +1,17 @@
-import { useNavigate } from "react-router-dom"
+import {  useNavigate } from "react-router-dom"
 import { coinbase, metamask, phantom, secure, wallect } from "../../assets"
 import Button from "../../components/button/button"
+import { useGlobalContext } from '../../components/context/shopcontext';
 
 
 const Paymentdetails = () => {
   const navigate=useNavigate()
+  const { clearAll,getTotalCartAmount,getTotalCartItems}=useGlobalContext()
   const handleclick=()=>{
+     clearAll()
     navigate("/delivery")
   }
+ 
   return (
     <section className='flex justify-center'>
       <main className='max-w-screen-2xl w-full'>
@@ -66,7 +70,7 @@ const Paymentdetails = () => {
                 </div>
              </div>
              <section className="flex flex-col gap-8">
-               <h6>Payment Summary</h6>
+               <h6 className="text-xl font-semibold">Payment Summary</h6>
                <div className="border-t-gray border-t pt-6 flex flex-col gap-4">
                  <p className="text-2xl font-semibold">Metamask wallet: <span className="text-2xl font-medium text-[#888888]">002345Ki90pzzz#</span></p>
                  <p className='text-[#888888]  text-xl'>Actively linked to Yaba, Lagos Nigeria.</p>
@@ -78,7 +82,7 @@ const Paymentdetails = () => {
                <div className="flex flex-col items-end w-full px-6 gap-6 border-t border-t-gray pt-6">
                     <div  className="flex items-center justify-between w-full">
                     <p className="text-2xl font-medium text-[#888888]">Products in cart:</p>
-                    <p className="text-2xl font-semibold">3 items</p>
+                    <p className="text-2xl font-semibold"> {getTotalCartItems()} item(s)</p>
                     </div>
                     <div  className="flex items-center justify-between w-full">
                         <p className="text-2xl font-medium text-[#888888]">Shipping:</p>
@@ -86,7 +90,7 @@ const Paymentdetails = () => {
                     </div>
                     <div className="flex items-center justify-between w-full">
                     <p className="text-2xl font-medium text-[#888888]">Total:</p>
-                    <p className="text-2xl font-semibold ">$114.00</p>
+                    <p className="text-2xl font-semibold ">${getTotalCartAmount()}</p>
                     </div>
                 </div>
              </section>

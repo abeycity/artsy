@@ -7,7 +7,7 @@ const MobileNav = ({handlenavbar,NAV}:{handlenavbar:()=>void,NAV:{Path:string,la
     
       
   return (
-    <div className='w-full text-[#000] p-6  flex flex-col gap-6' onClick={handlenavbar}>
+    <div className='w-full text-[#000] p-6  flex flex-col gap-6' >
        <div className='flex justify-between items-center w-full'> 
             <Link to={"/"}>
                 <h3 className="font-bold font-logo text-3xl cursor-pointer">ARTSY.</h3>
@@ -21,6 +21,7 @@ const MobileNav = ({handlenavbar,NAV}:{handlenavbar:()=>void,NAV:{Path:string,la
                { NAV.map(({Path,label},i)=>
                   <li key={i}>
                     <NavLink to={Path}
+                    onClick={handlenavbar}
                     className={({ isActive, isPending }) =>
                       isPending ? "pending" : isActive ? "font-bold underline underline-offset-8" : ""}>{label}</NavLink>
                   </li>

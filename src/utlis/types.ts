@@ -1,5 +1,6 @@
 import { ReactNode,} from 'react';
 
+
 export type hproProps={
     img:StaticImport,
     title:string,
@@ -46,5 +47,7 @@ export type ProductProps={
     discription:string,
     creator:string,
     country:string,
-    views:number
+    views:number,
+    id:number
 }
+

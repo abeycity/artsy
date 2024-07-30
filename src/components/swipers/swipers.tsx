@@ -8,17 +8,18 @@ const Swipers = () => {
     <div>
         <Swiper    
         >
-        <SwiperSlide className='relative'>
+    
+        <SwiperSlide className='relative '>
             <div>
-               <img src={homeslider} alt=""  className='min-h-[300px]'/>
+               <img src={homeslider} alt=""  className='min-h-[300px] w-full'/>
             </div>
-            <div className='absolute bottom-10 flex flex-col gap-4 md:flex-row justify-between  items-end text-white px-4 md:px-10 py-1 w-full'>
+            <div className='absolute bottom-4 md:bottom-10 flex flex-col gap-4 lg:flex-row justify-between  items-end text-white px-4 md:px-10 py-1 w-full'>
                <main className='flex gap-4 items-center'>
-                 <div> <h5 className='font-bellefair max-sm:text-2xl text-7xl font-thin '> 01</h5></div>
+                 <div> <h5 className='font-bellefair text-2xl md:text-7xl font-thin '> 01</h5></div>
                  <div className='flex flex-col gap-2 md:gap-4'>
-                    <span className='font-bellefair max-sm:text-xl text-4xl font-thin'>monalisa redefined in style.</span>
+                    <span className='font-bellefair text-xl lg:text-4xl font-thin'>monalisa redefined in style.</span>
                     <span className='font-bellefair'>start on : 08.00 gts . monday</span>
-                    <article className='w-[280px] max-md::w-[550px]  max-sm:text-sm font-satoshi'>
+                    <article className='w-[280px] md:w-[550px]  text-sm  md:text-lg font-satoshi'>
                         GET EXCLUSIVE VIEWING OF CONTEMPORARY ART AND CONNECT WITH INVESTORS 
                         AND AUCTIONEERS ACROSS THE WORLD BRINGING THEIR HIGHEST AND LOWEST BIDS.
                     </article>
@@ -30,17 +31,17 @@ const Swipers = () => {
                </div>
             </div>
         </SwiperSlide>
-        <SwiperSlide className='relative'>
+        <SwiperSlide className='relative '>
             <div>
-               <img src={homeslider} alt=""  className='min-h-[300px]'/>
+               <img src={homeslider} alt=""  className='min-h-[300px] w-full'/>
             </div>
-            <div className='absolute bottom-10 flex flex-col gap-4 md:flex-row justify-between  items-end text-white px-4 md:px-10 py-1 w-full'>
+            <div className='absolute left-0 bottom-4 md:bottom-10 flex flex-col gap-4 lg:flex-row justify-between  items-end text-white px-4 md:px-10 py-1 w-full'>
                <main className='flex gap-4 items-center'>
-                 <div> <h5 className='font-bellefair max-sm:text-2xl text-7xl font-thin '> 01</h5></div>
-                 <div className='flex flex-col gap-4'>
-                    <span className='font-bellefair max-sm:text-xl text-4xl font-thin'>monalisa redefined in style.</span>
+                 <div> <h5 className='font-bellefair text-2xl md:text-7xl font-thin '> 01</h5></div>
+                 <div className='flex flex-col gap-2 md:gap-4'>
+                    <span className='font-bellefair text-xl lg:text-4xl font-thin'>monalisa redefined in style.</span>
                     <span className='font-bellefair'>start on : 08.00 gts . monday</span>
-                    <article className='w-[280px] max-md::w-[550px]  max-sm:text-sm font-satoshi'>
+                    <article className='w-[280px] md:w-[550px]  text-sm  md:text-lg font-satoshi'>
                         GET EXCLUSIVE VIEWING OF CONTEMPORARY ART AND CONNECT WITH INVESTORS 
                         AND AUCTIONEERS ACROSS THE WORLD BRINGING THEIR HIGHEST AND LOWEST BIDS.
                     </article>
@@ -52,9 +53,7 @@ const Swipers = () => {
                </div>
             </div>
         </SwiperSlide>
-
-        
-        </Swiper>
+      </Swiper>
     </div>
   )
 }

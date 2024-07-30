@@ -35,7 +35,8 @@ export const
       discription:"Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor pur",
       creator:"Ali Dawa",
       country:"Italy",
-      views:1.7
+      views:1.7,
+      id:1
       },
      product2:{
       img:product2,
@@ -44,7 +45,8 @@ export const
       discription:"Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor pur",
       creator:"Dan Murray",
       country:"Canada",
-      views:1.7
+      views:1.7,
+      id:2
      },
      product3:{
       img:product3,
@@ -53,7 +55,8 @@ export const
       discription:"Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor pur",
       creator:"Ali Dawa",
       country:"Italy",
-      views:2.1
+      views:2.1,
+      id:3
      },
      product4:{
       img:product4,
@@ -62,7 +65,8 @@ export const
       discription:"Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor pur",
       creator:"Jacob Banks",
       country:"United States",
-      views:2.7
+      views:2.7,
+      id:4
      },
      product5:{
       img:product5,
@@ -71,7 +75,8 @@ export const
       discription:"Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor pur",
       creator:"Alima Maturu",
       country:"Nigeria",
-      views:5.7  
+      views:5.7,
+      id:5
       },
      product6:{
       img:product6,
@@ -80,7 +85,8 @@ export const
       discription:"Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor pur",
       creator:"Dola Tubosun",
       country:"Nigeria",
-      views:6.6
+      views:6.6,
+      id:6
      },
      product7:{
       img:product7,
@@ -89,7 +95,8 @@ export const
       discription:"Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor pur",
       creator:"Jacob Banks",
       country:"United States",
-      views:2.7
+      views:2.7,
+      id:7
      },
      project8:{
       img:product8,
@@ -98,7 +105,8 @@ export const
       discription:"Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor pur",
       creator:"Alima Maturu",
       country:"Nigeria",
-      views:5.7  
+      views:5.7,
+      id:8  
      },
      product9:{
       img:product9,
@@ -107,7 +115,8 @@ export const
       discription:"Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor pur",
       creator:"Dola Tubosun",
       country:"Nigeria",
-      views:6.6
+      views:6.6,
+      id:9
      },
 
    },

@@ -13,6 +13,7 @@ import Shoppingdetails from '../pages/steppers/shoppingdetails';
 import Marketplacelayout from '../pages/marketplacelayout';
 import Stepper from '../pages/steps';
 import Delivery from '../pages/delivery';
+import { GlobalProvider } from '../components/context/shopcontext';
 
 const Layout = ({ children }: { children: ReactNode }) => {
     const NAV=[
@@ -35,11 +36,13 @@ const Layout = ({ children }: { children: ReactNode }) => {
     ]
 
   return (
-    <div>
-      <Nav NAV={NAV} />
-      {children}
-      <Footer />
-    </div>
+      <GlobalProvider>
+        <div>
+            <Nav NAV={NAV} />
+            {children}
+            <Footer />
+        </div>
+      </GlobalProvider>
   );
 };
 

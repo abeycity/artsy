@@ -3,13 +3,16 @@ import { HiOutlineShoppingCart } from "react-icons/hi";
 import { CiBellOn } from "react-icons/ci";
 import { Link, NavLink,} from "react-router-dom";
 import { FaBars } from "react-icons/fa";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import MobileNav from "./mobilenav";
+
+import { GlobalContext } from "../context/shopcontext";
 
 
 
 const Nav = ({NAV}:{NAV:{Path:string,label:string}[]}) => {
   const [navbar,setNavbar]=useState(false)
+  const {getTotalCartItems}=useContext(GlobalContext)
   const  handlenavbar=()=>{
     setNavbar((prev)=>!prev)
   
@@ -45,8 +48,21 @@ const Nav = ({NAV}:{NAV:{Path:string,label:string}[]}) => {
               <div>
                 <IoSearch fontSize={21}/>
               </div>
-              <div>
-                <HiOutlineShoppingCart fontSize={21} />
+              <div className="relative">
+                <Link to={"/marketplace/shoppingcart"}>
+                   <HiOutlineShoppingCart fontSize={21}  />
+                </Link>
+                <div className="absolute -top-2 left-6">
+                  {
+                      getTotalCartItems() > 0  &&
+                      <div>        
+                          <div>
+                            <p className="text-sm font-bold"> {getTotalCartItems()}</p>
+                          </div>
+                     </div>
+                  }
+                </div>
+                 
               </div>
               <div className="max-md:hidden">
                 <CiBellOn fontSize={21} />
