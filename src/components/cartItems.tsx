@@ -77,7 +77,7 @@ const CartItems = ({handleclick,goBack,proceed}:{handleclick?:()=>void,goBack?:(
            :
             <section className={`${getTotalCartItems() === 0 ? 'hidden' : '' }  flex flex-col-reverse justify-between gap-10 px-6 py-8 border-t mt-10 md:flex-row `}>
                 <div className="w-full flex flex-col gap-4 items-center">
-                    <Button classname=" px-8 lg:px-16 bg-dark text-white py-4 text-2xl rounded-md hover:bg-[#006CA2] hover:ease-in " onclick={handleclick}>Proceed to checkout</Button>
+                    <Button classname=" px-6 lg:px-16 bg-dark text-white py-4 text-xl md:text-2xl rounded-md hover:bg-[#006CA2] hover:ease-in " onclick={handleclick}>Proceed to checkout</Button>
                     <Button outline  classname=" text-xl font-medium" onclick={goBack}>Continue shopping</Button>
                 </div>
                 <div className="flex flex-col items-end w-full px-6 gap-6">
