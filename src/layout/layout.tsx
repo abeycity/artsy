@@ -40,7 +40,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
   return (
       <GlobalProvider>
         <div>
-           <Toaster position='top-right'/>
+           <Toaster position='bottom-right'/>
             <Nav NAV={NAV} />
             {children}
             <Footer />
