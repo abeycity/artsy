@@ -3,16 +3,17 @@ import { HiOutlineShoppingCart } from "react-icons/hi";
 import { CiBellOn } from "react-icons/ci";
 import { Link, NavLink,} from "react-router-dom";
 import { FaBars } from "react-icons/fa";
-import { useContext, useState } from "react";
+import {  useState } from "react";
 import MobileNav from "./mobilenav";
 
-import { GlobalContext } from "../context/shopcontext";
+
+import {useGlobalContext } from "../context/shopcontext";
 
 
 
 const Nav = ({NAV}:{NAV:{Path:string,label:string}[]}) => {
   const [navbar,setNavbar]=useState(false)
-  const {getTotalCartItems}=useContext(GlobalContext)
+  const {getTotalCartItems}=useGlobalContext()
   const  handlenavbar=()=>{
     setNavbar((prev)=>!prev)
   

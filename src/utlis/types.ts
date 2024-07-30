@@ -1,8 +1,7 @@
 import { ReactNode,} from 'react';
 
-
 export type hproProps={
-    img:StaticImport,
+    img:string,
     title:string,
     discription:string,
     text:string,
@@ -15,7 +14,7 @@ export type Buttonprop={
     onclick?:()=>void
 }
 export type DropProps={
-    img:StaticImport,
+    img:string,
     event:string,
     name:string,
     desc:string,
@@ -23,7 +22,7 @@ export type DropProps={
     notify:string
 }
 export type bidProps={
-    img:StaticImport,
+    img:string,
     creator:string,
     date:string,
     highestbid:number,
@@ -41,7 +40,7 @@ export type selectDropMenuProps={
    grid?:boolean
 }
 export type ProductProps={
-    img:StaticImport,
+    img:string,
     name:string,
     price:number,
     discription:string,

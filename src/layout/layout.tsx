@@ -14,6 +14,7 @@ import Marketplacelayout from '../pages/marketplacelayout';
 import Stepper from '../pages/steps';
 import Delivery from '../pages/delivery';
 import { GlobalProvider } from '../components/context/shopcontext';
+import { Toaster } from 'react-hot-toast';
 
 const Layout = ({ children }: { children: ReactNode }) => {
     const NAV=[
@@ -38,6 +39,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
   return (
       <GlobalProvider>
         <div>
+           <Toaster position='top-right'/>
             <Nav NAV={NAV} />
             {children}
             <Footer />

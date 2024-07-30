@@ -1,6 +1,6 @@
 import { createContext, ReactNode, useState, useContext, useEffect } from 'react';
 import { products } from '../../utlis/variable';
-
+import {toast} from "react-hot-toast" 
 // Define types for context
 interface CartItem {
   [key: number]: number;
@@ -38,14 +38,35 @@ export const GlobalProvider = ({ children }: { children: ReactNode }) => {
 
   const addToCart = (id: number) => {
     setCartItem((prev) => ({ ...prev, [id]: prev[id] + 1 }));
+    toast(`product added to cart`,{
+      style: {
+        border: '1px solid #713200',
+        padding: '16px',
+        color: '#713200',
+      },
+    })
   };
 
   const removeFromCart = (id: number) => {
     setCartItem((prev) => ({ ...prev, [id]: Math.max(prev[id] - 1, 0) }));
+    toast(`product removed from  cart`,{
+      style: {
+        border: '1px solid #954535',
+        padding: '16px',
+        color: '#DE3163',
+      },
+      })
   };
 
   const clear = (id: number) => {
     setCartItem((prev) => ({ ...prev, [id]: 0 }));
+    toast(`product removed from  cart`,{
+      style: {
+        border: '1px solid #954535',
+        padding: '16px',
+        color: '#DE3163',
+      },
+      })
   };
 
   const clearAll = () => {
