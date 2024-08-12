@@ -13,7 +13,7 @@ const Cardlayout = ({content}:{content:ProductProps[]}) => {
                 <div  className='flex flex-col gap-3 bg-[#fff]  shadow-md shadow-gray ring-2 ring-[#f7f7f7] rounded-lg p-4'  >
                       <div className='rounded-lg overflow-hidden object-cover'>
                         <LazyLoad>
-                          <img src={img} alt="" />
+                          <img src={img} alt=""  loading="lazy"/>
                         </LazyLoad>
                       </div>
                       <div className='flex flex-col items-start'>

@@ -59,7 +59,7 @@ const Homepage = () => {
                             </LazyLoad>
                         </li> 
                         <li>
-                        <LazyLoad>
+                           <LazyLoad>
                               <img src={homeimg3} alt='' loading='lazy' width={500} height={500} />
                             </LazyLoad>
                         </li>
