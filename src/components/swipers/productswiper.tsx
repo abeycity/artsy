@@ -10,8 +10,8 @@ const Productswiper = () => {
         modules={[Pagination]}
         spaceBetween={50}
         slidesPerView={3}
-        navigation
-        pagination={{ clickable: true }}
+
+        pagination={{ type:"bullets" }}
         scrollbar={{ draggable: true }}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log('slide change')}

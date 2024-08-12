@@ -122,7 +122,7 @@ const Homepage = () => {
 
             </section>
             <section className=" flex flex-col gap-20">
-            <main className="bg-gradient-to-r from-start via-middle to-end w-full p-3 md:px-6 xl:px-20 py-8 flex flex-col gap-4">
+            <main className="bg-gradient-to-r from-start via-middle to-end w-full p-3 md:px-6 xl:px-20 py-8 flex flex-col gap-4 relative h-fit">
                 <h4 className="text-white font-satoshi text-4xl hidden md:flex ">See Upcoming Auctions and Exhibitions</h4>
                 <div className="lg:flex hidden items-center ">
                     <hr className=" text-white w-[600px]  h-px " />
