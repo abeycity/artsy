@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { homeslider } from '../../assets';
 import Button from '../button/button';
 import "swiper/css";
+import LazyLoad from 'react-lazy-load';
 const Swipers = () => {
   return (
     <div>
@@ -11,7 +12,9 @@ const Swipers = () => {
     
         <SwiperSlide className='relative '>
             <div>
-               <img src={homeslider} alt=""  className='min-h-[300px] w-full'/>
+              <LazyLoad>
+               <img src={homeslider} alt="" width={500} height={500} className='min-h-[300px] w-full'/>
+              </LazyLoad>
             </div>
             <div className='absolute bottom-4 md:bottom-10 flex flex-col gap-4 lg:flex-row justify-between  items-end text-white px-4 md:px-10 py-1 w-full'>
                <main className='flex gap-4 items-center'>
@@ -33,7 +36,9 @@ const Swipers = () => {
         </SwiperSlide>
         <SwiperSlide className='relative '>
             <div>
-               <img src={homeslider} alt=""  className='min-h-[300px] w-full'/>
+              <LazyLoad>
+                 <img src={homeslider} alt="" width={500} height={500}  loading='lazy' className='min-h-[300px] w-full'/>
+              </LazyLoad>
             </div>
             <div className='absolute left-0 bottom-4 md:bottom-10 flex flex-col gap-4 lg:flex-row justify-between  items-end text-white px-4 md:px-10 py-1 w-full'>
                <main className='flex gap-4 items-center'>

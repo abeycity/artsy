@@ -7,6 +7,7 @@ import { Link } from "react-router-dom"
 
 
 
+
 const CartItems = ({handleclick,goBack,proceed}:{handleclick?:()=>void,goBack?:()=>void,proceed?:boolean}) => {
      const {cartItem,addToCart,removeFromCart, clear,getTotalCartAmount,getTotalCartItems}=useGlobalContext()
     

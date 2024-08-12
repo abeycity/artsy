@@ -6,6 +6,7 @@ import Swipers from "./swipers/swipers";
 import Newsletter from "../newsletter/newsletter";
 import {  useState,useEffect} from "react";
 import { Link } from "react-router-dom";
+import LazyLoad from "react-lazy-load";
 
 const Homepage = () => {
     
@@ -32,7 +33,7 @@ const Homepage = () => {
         return(
             
             <div>
-            <img src={currentImage} alt="" />        
+            <img src={currentImage} alt="" width={700} height={700} />        
         </div>
         )     
      }
@@ -42,22 +43,30 @@ const Homepage = () => {
         <div className="max-w-screen-2xl w-full">
             <section className=''>
                 <div className='flex flex-col items-center gap-6 text-center lg:mt-20  mb-6'>
-                    <h3 className='text-3xl lg:text-6xl font-medium font-clash  w-[330px] md:w-[1000px] leading-normal'>Photography is poetry & beautiful untold stories</h3>
+                    <article className='text-3xl lg:text-6xl font-medium font-clash  w-[330px] md:w-[1000px] leading-normal'>Photography is poetry & beautiful untold stories</article>
                     <p className=' font-medium font-logo text-lg md:text-2xl leading-normal  w-[350px] md:w-[600px] lg:w-[800px] '>Flip through more than 10,000 vintage shots, old photograghs, historic images and captures seamlessly in one place. Register to get top access.</p>
                 </div>
                 <div className="w-full">
                     <ul className=' flex justify-between gap-6 w-full  items-center '>
                         <li>
-                            <img src={homeimg1} alt='' />
+                            <LazyLoad>
+                              <img src={homeimg1} alt=''loading='lazy'  width={500} height={500}/>
+                            </LazyLoad>
                         </li> 
                         <li>
-                            <img src={homeimg2} alt='' />
+                        <LazyLoad>
+                              <img src={homeimg2} alt='' loading='lazy' width={500} height={500}/>
+                            </LazyLoad>
                         </li> 
                         <li>
-                            <img src={homeimg3} alt=''/>
+                        <LazyLoad>
+                              <img src={homeimg3} alt='' loading='lazy' width={500} height={500} />
+                            </LazyLoad>
                         </li>
                         <li>
-                            <img src={homeimg4} alt=''/>
+                        <LazyLoad>
+                              <img src={homeimg4} alt='' loading='lazy'  width={500} height={500} />
+                            </LazyLoad>
                         </li>
                     </ul>
                 </div>
@@ -72,7 +81,7 @@ const Homepage = () => {
                         <div className="bg-[#333333] w-full h-px md:flex hidden"/>
                             <div className={` flex  items-end lg:flex-row flex-col   gap-8 ${id === '2' ? 'lg:flex-row-reverse' :''}`}>
                                 <div className="relative  overflow-hidden w-full">
-                                    <img src={img} alt={title} />
+                                    <img src={img} alt={title}  className="w-full" loading='lazy'  width={700} height={500}/>
                                     <Link to="/marketplace">
                                             <div className="flex justify-center w-full items-center left-0 absolute top-0 gap-6 opacity-0 bg-global  h-full   lg:bg-opacity-0  lg:hover:opacity-70 hover:bg-opacity-100">
                                                 <p className="font-satoshi font-normal text-2xl text-[#fff] z-[999] ">View Product</p>
@@ -88,16 +97,16 @@ const Homepage = () => {
                                         <div className="flex items-center gap-4">
                                             <ul className="flex items-center">
                                                 <li>
-                                                    <img src={creator1} alt="creator-img"/>
+                                                    <img src={creator1} alt="creator-img" width={50} height={50}/>
                                                 </li>
                                                 <li>
-                                                    <img src={creator2} alt="creator-img"/>
+                                                    <img src={creator2} alt="creator-img" width={50} height={50}/>
                                                 </li>
                                                 <li>
-                                                    <img src={creator3} alt="creator-img"/>
+                                                    <img src={creator3} alt="creator-img" width={50} height={50}/>
                                                 </li>
                                                 <li>
-                                                    <img src={creator4} alt="creator-img"/>
+                                                    <img src={creator4} alt="creator-img" width={50} height={50}/>
                                                 </li>
                                             </ul>
                                             <p className="font-satoshi md:font-normal font-semibold text-gray text-sm md:text-lg ">{text}</p>
@@ -125,19 +134,23 @@ const Homepage = () => {
             </main>
             <div className="flex flex-col gap-10">
                 <hr />
-                <div className="flex justify-between items-center px-4 md:px-16">
-                    <h5 className="font-satoshi text-2xl font-medium">
-                        Explore marketplace
-                    </h5>
-                    <BsArrowRightCircle  fontSize={41}/>
-                </div>
+                <Link to={"/marketplace"}>
+                   <div className="flex justify-between items-center px-4 md:px-16">
+                        <h5 className="font-satoshi text-2xl font-medium">
+                            Explore marketplace
+                        </h5>
+                        <BsArrowRightCircle  fontSize={41}/>
+                    </div>
+                </Link>
                 <hr />
-                <div className="flex justify-between items-center px-4  md:px-16">
-                    <h5 className="font-satoshi text-2xl font-medium">
-                        See auctions
-                    </h5>
-                    <BsArrowRightCircle  fontSize={41}/>
-                </div>
+                <Link to={"/auctions"}>  
+                   <div className="flex justify-between items-center px-4  md:px-16">
+                        <h5 className="font-satoshi text-2xl font-medium">
+                            See auctions
+                        </h5>
+                        <BsArrowRightCircle  fontSize={41}/>
+                    </div>
+                </Link>
                 <hr/>
             </div>
                 
@@ -174,7 +187,7 @@ const Homepage = () => {
                     <h3 className="font-clash font-extrabold text-4xl uppercase">Circa</h3>
                 </div>
                 <div className="flex justify-end">
-                <img src={date} alt=""  className="w-[150px] md:w-[500px]" />
+                <img src={date} alt=""   width={500} height={500} className="w-[150px] md:w-[500px]" />
                 </div>
                  <div  className="absolute left-4  lg:left-[23rem] -bottom-12">
                     <Topcreatorscycle/>

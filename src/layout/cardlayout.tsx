@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import { ProductProps } from "../utlis/types"
+import LazyLoad from "react-lazy-load"
 
 
 const Cardlayout = ({content}:{content:ProductProps[]}) => {
@@ -11,7 +12,9 @@ const Cardlayout = ({content}:{content:ProductProps[]}) => {
              <Link to={`/marketplace/${name}`} key={name}>
                 <div  className='flex flex-col gap-3 bg-[#fff]  shadow-md shadow-gray ring-2 ring-[#f7f7f7] rounded-lg p-4'  >
                       <div className='rounded-lg overflow-hidden object-cover'>
-                      <img src={img} alt="" />
+                        <LazyLoad>
+                          <img src={img} alt="" />
+                        </LazyLoad>
                       </div>
                       <div className='flex flex-col items-start'>
                         <h3  className=''>{name}</h3>

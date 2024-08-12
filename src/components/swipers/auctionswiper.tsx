@@ -37,7 +37,7 @@ const Auctionswiper = () => {
     >
         <SwiperSlide>
             <div className='relative'>
-                <img src={auc1} alt=""  width={500}/>
+                <img src={auc1} alt=""  width={500} height={500}/>
                 <div className='absolute bottom-10 left-10  bg-blend-saturation  bg-[#F5F4F43D] px-8 md:px-16 py-3 backdrop-blur-2  bg-opacity-70  '>
                  <figcaption className='font-satoshi font-medium text-2xl text-white z-[9999]  '>6hr : 40mins : 15s</figcaption>
                 </div>
@@ -45,23 +45,25 @@ const Auctionswiper = () => {
         </SwiperSlide>
         <SwiperSlide>
             <div className='relative'>
-                <img src={auc2} alt=""  width={500} />
+                <img src={auc2} alt=""  width={500}  height={500}/>
                 <div className='absolute bottom-10 left-10  bg-blend-saturation  bg-[#F5F4F43D] px-8 md:px-16 py-3 backdrop-blur-2  bg-opacity-70  '>
                  <figcaption className='font-satoshi font-medium text-2xl text-white z-[9999]  '>6hr : 40mins : 15s</figcaption>
                 </div>
             </div>
         </SwiperSlide>
         <SwiperSlide>
-            <div className='relative h-[330px] overflow-hidden'>
-                <img src={auc3} alt="" width={500}/>
+            <div className='relative h-[330px] overflow-hidden rounded-xl'>
+                <img src={auc3} alt="" width={500} height={500} className='rounded-xl object-cover'/>
                 <div className='absolute bottom-10 left-10  bg-blend-saturation  bg-[#F5F4F43D] px-8 md:px-16 py-3 backdrop-blur-2  bg-opacity-70  '>
                  <figcaption className='font-satoshi font-medium text-2xl text-white z-[9999]  '>6hr : 40mins : 15s</figcaption>
                 </div>
             </div>
         </SwiperSlide>
         <SwiperSlide>
-            <div className='relative h-[330px] overflow-hidden'>
-                <img src={auc3} alt="" width={500}/>
+            <div className='relative h-[330px] overflow-hidden rounded-xl'>
+                <div className='overflow-hidden object-cover'>
+                  <img src={auc3} alt="" width={500} height={500} className='rounded-xl'/>
+                </div>
                 <div className='absolute bottom-10 left-10  bg-blend-saturation  bg-[#F5F4F43D] px-8 md:px-16 py-3 backdrop-blur-2  bg-opacity-70  '>
                  <figcaption className='font-satoshi font-medium text-2xl text-white z-[9999]  '>6hr : 40mins : 15s</figcaption>
                 </div>
@@ -69,7 +71,7 @@ const Auctionswiper = () => {
         </SwiperSlide>
         <SwiperSlide>
             <div className='relative'>
-                <img src={auc1} alt=""  width={500}/>
+                <img src={auc1} alt=""  width={500} height={500}/>
                 <div className='absolute bottom-10 left-10  bg-blend-saturation  bg-[#F5F4F43D] px-8 md:px-16 py-3 backdrop-blur-2  bg-opacity-70  '>
                  <figcaption className='font-satoshi font-medium text-2xl text-white z-[9999]  '>6hr : 40mins : 15s</figcaption>
                 </div>

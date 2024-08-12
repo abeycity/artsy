@@ -13,16 +13,16 @@ const Details = ({handleclick}:{handleclick:()=>void}) => {
   return (
       <form action="" className='flex flex-col gap-6 items-start w-full'>
             <div className='flex flex-col gap-2 w-full '>
-                <label htmlFor="email" className='text-[#888888]  text-xl'>Your email</label>
-                <input type="email" name="email" placeholder='willymonka@gmail.com' className='bg-[#F2F2F2] py-4 px-6 rounded-md  border border-gray w-full'/>
+                <label htmlFor="mail" className='text-[#888888]  text-xl'>Your email</label>
+                <input type="email" name="mail" placeholder='willymonka@gmail.com' className='bg-[#F2F2F2] py-4 px-6 rounded-md  border border-gray w-full'/>
             </div>
             <div className='flex gap-4 items-center w-full'>
-                <input type="checkbox" name="checkbox" id="" />
-                <label htmlFor="checkbox" className='text-[#888888]  text-sm'>Get updates about new drops & exclusive offers</label>
+                <input type="checkbox" name="box" id="" />
+                <label htmlFor="box" className='text-[#888888]  text-sm'>Get updates about new drops & exclusive offers</label>
             </div>
             <div className='flex flex-col gap-2 w-full'>
-                <label className='text-[#888888]  text-xl' htmlFor="email">Your email</label>
-                <input type="email" name="email" placeholder='willymonka@gmail.com' className='bg-[#F2F2F2] py-4 px-6 rounded-md  border border-gray w-full'/>
+                <label className='text-[#888888]  text-xl' htmlFor="yourmail">Your email</label>
+                <input type="email" name="yourmail" placeholder='willymonka@gmail.com' className='bg-[#F2F2F2] py-4 px-6 rounded-md  border border-gray w-full'/>
             </div>
             <div className='flex flex-col gap-2  w-full'>
              <label className='text-[#888888]  text-xl'>Choose a wallet</label>
@@ -44,8 +44,8 @@ const Details = ({handleclick}:{handleclick:()=>void}) => {
 
             </div>
             <div className='flex flex-col gap-2 w-full '>
-                  <label htmlFor="numer" className='text-[#888888]  text-xl'>Phone number</label>
-                  <input type='number' placeholder='123111111111' name='number' className='bg-[#F2F2F2] py-4 px-6 rounded-md  border border-gray w-full'/>                    
+                  <label htmlFor="phonenumer" className='text-[#888888]  text-xl'>Phone number</label>
+                  <input type='number' placeholder='123111111111' name='phonenumber' className='bg-[#F2F2F2] py-4 px-6 rounded-md  border border-gray w-full'/>                    
             </div>
            <div className='w-full'>
              <Button classname="bg-[#000] text-[#f2f2f2] text-center text-2xl py-6 rounded-md hover:bg-[#006CA2] hover:ease-in duration-200" onclick={handleclick} >Proceed to payment</Button>

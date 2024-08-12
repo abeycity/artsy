@@ -9,7 +9,7 @@ const Paymentdetails = () => {
   const { clearAll,getTotalCartAmount,getTotalCartItems}=useGlobalContext()
   const handleclick=()=>{
      clearAll()
-    navigate("/delivery")
+    navigate("/delivery", { replace: true })
   }
  
   return (

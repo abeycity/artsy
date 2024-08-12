@@ -16,7 +16,7 @@ const Drops = () => {
               drops.map(({img,event,name,desc,creator,notify})=>
                 <div key={name} className="flex xl:flex-row flex-col p-4 gap-4 md:gap-8 w-full relative">
                   <div className="relative w-full lg:p-2">
-                    <img src={img} alt={name} />
+                    <img src={img} alt={name} width={700} height={700}/>
                     <figcaption className="absolute bottom-4 w-full md:px-16  px-6 py-3 ">
                       <div className="flex flex-col gap-2 md:gap-4 bg-[#F5F4F43D] backdrop-blur-2  bg-opacity-70 p-1 px-4 md:p-6 rounded-xl ring ring-[#f2f2f2] ring-opacity-50 ">
                           <p className="font-satoshi text-sm md:text-xl text-white z-[9999]">Time remaining</p>
